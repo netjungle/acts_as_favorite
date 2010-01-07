@@ -20,3 +20,19 @@ Rake::RDocTask.new(:rdoc) do |rdoc|
   rdoc.rdoc_files.include('README')
   rdoc.rdoc_files.include('lib/**/*.rb')
 end
+
+begin
+  require 'jeweler'
+  Jeweler::Tasks.new do |gemspec|
+    gemspec.name = "acts_as_favorite"
+    gemspec.summary = "User fovorites for you web application"
+    gemspec.description = "This gem provides a simple way to track users favorites within the system using ActiveRecord models"
+    gemspec.email = "kossnocorp@gmail.com"
+    gemspec.homepage = "http://github.com/kossnocorp/acts_as_favorite"
+    gemspec.authors = ["Josh Martin"]
+    gemspec.version = "0.1"
+  end
+  Jeweler::GemcutterTasks.new
+rescue LoadError
+  puts "Jeweler not available. Install it with: gem install jeweler"
+end
