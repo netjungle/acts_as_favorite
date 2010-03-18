@@ -42,7 +42,7 @@ module ActsAsFavorite
 
       # Removes an object from the users favorites
       def has_no_favorite( favorite_obj )
-        favorite = get_favorite ( favorite_obj )
+        favorite = get_favorite(favorite_obj)
 
         # ACA: The original plugin did not properly destroy the favorite.
         # Instead, it just removed the element from the favorites list. If the
